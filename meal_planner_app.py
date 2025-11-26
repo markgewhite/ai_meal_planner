@@ -331,4 +331,18 @@ if __name__ == "__main__":
 
     # Create and launch the interface
     demo = create_interface()
-    demo.launch(share=False)
+
+    # Check if running on Render (or other cloud platform with PORT env var)
+    port = os.getenv('PORT')
+    if port:
+        # Cloud deployment mode
+        print(f"Running in cloud mode on port {port}")
+        demo.launch(
+            server_name="0.0.0.0",  # Listen on all interfaces
+            server_port=int(port),
+            share=False
+        )
+    else:
+        # Local development mode
+        print("Running in local development mode")
+        demo.launch(share=False)
