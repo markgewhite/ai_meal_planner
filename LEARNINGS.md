@@ -1,6 +1,6 @@
 # 📚 Key Learnings from Building the AI Meal Planner
 
-This document captures the important lessons, insights, and technical knowledge gained while building this project.
+This document captures the key lessons, insights, and technical knowledge gained during this project.
 
 ## 🎯 Project Goals
 
@@ -96,7 +96,7 @@ This document captures the important lessons, insights, and technical knowledge 
 2. **UI/UX Considerations**
    - Images should be visible without scrolling
    - Markdown rendering makes text more readable
-   - Accordions help organize long content
+   - Accordions help organise long content
    - Progress indicators improve user experience
 
 3. **Component Compatibility**
@@ -109,7 +109,7 @@ This document captures the important lessons, insights, and technical knowledge 
 ### Common Issues Encountered
 
 1. **Module Not Found Errors**
-   - Jupyter kernel not using correct Python environment
+   - Jupyter kernel not using the correct Python environment
    - Solution: Register venv as Jupyter kernel with `ipykernel`
 
 2. **API Timeouts**
@@ -118,7 +118,7 @@ This document captures the important lessons, insights, and technical knowledge 
 
 3. **Markdown Not Rendering**
    - Using `gr.Textbox` instead of `gr.Markdown`
-   - Solution: Use appropriate component for content type
+   - Solution: Use an appropriate component for the content type
 
 4. **Layout Problems**
    - Markdown components expand to full height
@@ -137,13 +137,13 @@ This document captures the important lessons, insights, and technical knowledge 
    - Don't try to do everything at once
 
 3. **Read Error Messages Carefully**
-   - Error messages often point to exact issue
+   - Error messages often point to the exact issue
    - Google error messages for common solutions
    - Check documentation for parameter names
 
 ## 💡 Best Practices Learned
 
-### Code Organization
+### Code Organisation
 
 1. **Separation of Concerns**
    - Configuration separate from logic
@@ -151,8 +151,8 @@ This document captures the important lessons, insights, and technical knowledge 
    - One function, one responsibility
 
 2. **Reusability**
-   - Write functions that can work in notebook or script
-   - Parameterize everything that might change
+   - Write functions that can work in a notebook or script
+   - Parameterise everything that might change
    - Use default values wisely
 
 3. **Documentation**
@@ -163,7 +163,7 @@ This document captures the important lessons, insights, and technical knowledge 
 ### Development Workflow
 
 1. **Start Simple**
-   - Build basic version first
+   - Build a basic version first
    - Add features incrementally
    - Test thoroughly at each step
 
@@ -190,7 +190,7 @@ This document captures the important lessons, insights, and technical knowledge 
    - Small UI details make big differences
 
 3. **Documentation is Your Friend**
-   - Write it for future you
+   - Write it for the future you
    - Good READMEs help others understand and use your work
    - Keep learnings documented
 
@@ -207,7 +207,7 @@ This document captures the important lessons, insights, and technical knowledge 
 ## 🚀 Next Steps
 
 Areas for further learning:
-- Explore prompt optimization techniques
+- Explore prompt optimisation techniques
 - Learn about model fine-tuning
 - Understand token limits and costs better
 - Experiment with streaming responses

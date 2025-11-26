@@ -1,6 +1,6 @@
 # 🍳 AI-Powered Meal Planner
 
-An intelligent web application that generates personalized daily meal plans with beautiful food photography using Google's Gemini AI.
+An intelligent web application that generates personalised daily meal plans with beautiful food photography using Google's Gemini AI.
 
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -21,10 +21,10 @@ This project was developed as part of the [Zero To Mastery AI Application Develo
 **Going Beyond the Course**: This implementation extends the course material by adding:
 - A fully interactive web interface with Gradio
 - Advanced image generation capabilities
-- Multiple customization options
-- Professional-grade code organization
+- Multiple customisation options
+- Professional-grade code organisation
 
-**Built with Claude Code**: This project was developed with the assistance of [Claude Code](https://claude.ai/code), demonstrating modern AI-assisted development practices and how AI tools can accelerate learning and development.
+**Built with Claude Code**: This project was developed with the assistance of [Claude Code](https://claude.ai/code), demonstrating modern AI-assisted development practices and how AI tools can accelerate learning and development. The app was built in half a day.
 
 The goal was to gain hands-on experience with:
 - Working with modern AI APIs
@@ -40,7 +40,7 @@ The goal was to gain hands-on experience with:
 - **Dietary Preferences**: Add requirements (high protein, low carb, vegetarian, etc.)
 - **Ingredient Flexibility**: Choose to use only provided ingredients or allow substitutions
 - **AI-Generated Images**: High-quality food photography for each meal
-- **Temperature Control**: Adjust creativity level of meal suggestions
+- **Temperature Control**: Adjust the creativity level of meal suggestions
 - **Beautiful UI**: Clean, responsive Gradio interface
 
 ## 🚀 Quick Start
