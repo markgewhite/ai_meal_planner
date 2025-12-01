@@ -89,7 +89,7 @@ def create_meals(ingredients,
 
     Before answering, make sure that you have followed the instructions listed above.
     The final lines of your answer should be the titles of the recipes, one on a new line.
-    The titles should be separated from the rest of your answer with a line of dashes. 
+    The titles should be separated from the rest of your answer with the line: ===== TITLES =====
     '''
 
     # Initialize the Gemini model with system instruction
@@ -129,7 +129,7 @@ def extract_meal_titles(meal_plan_text):
     # Find the line of dashes that separates the meal plan from titles
     separator_index = -1
     for i, line in enumerate(lines):
-        if line.strip().startswith('---'):
+        if line.strip().startswith('===== TITLES ====='):
             separator_index = i
             break
 
@@ -228,6 +228,7 @@ def generate_meal_plan_with_images(ingredients, kcal, exact_ingredients, output_
         )
 
         # Extract meal titles
+        print(meal_plan)
         print("Extracting meal titles...")
         titles = extract_meal_titles(meal_plan)
 
