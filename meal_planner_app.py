@@ -33,8 +33,12 @@ if not api_key:
         "GOOGLE_API_KEY not found. Please check your .env file."
     )
 
-genai.configure(api_key=api_key)
-print("✓ Google Gemini API configured successfully!")
+# Force REST transport instead of gRPC (better for restrictive networks like mobile hotspots)
+genai.configure(
+    api_key=api_key,
+    transport='rest'
+)
+print("✓ Google Gemini API configured successfully (using REST transport)!")
 
 
 # ============================================================================
