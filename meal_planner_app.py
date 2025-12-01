@@ -84,7 +84,8 @@ def create_meals(ingredients,
     {'8. If possible, the meals should be: ' + extra if extra else ''}
 
     Before answering, make sure that you have followed the instructions listed above.
-    The last line of your answer should be a string that contains ONLY the titles of the recipes and nothing more with a semi-colon between the main ingredients.
+    The final lines of your answer should be the titles of the recipes, one on a new line.
+    The titles should be separated from the rest of your answer with a line of dashes. 
     '''
 
     # Initialize the Gemini model with system instruction
@@ -109,8 +110,8 @@ def extract_meal_titles(meal_plan_text):
     """
     Extract individual meal titles from the meal plan response.
 
-    The meal plan text should have the titles on the last line,
-    separated by semi-colons as per the prompt instructions.
+    The meal plan text should have titles on separate lines after a line of dashes,
+    as per the prompt instructions.
 
     Parameters:
     - meal_plan_text: The full text response from create_meals()
@@ -118,12 +119,24 @@ def extract_meal_titles(meal_plan_text):
     Returns:
     - List of meal titles (typically 3: breakfast, lunch, dinner)
     """
-    # Get the last line which contains only the meal titles
+    # Split into lines
     lines = meal_plan_text.strip().split('\n')
-    last_line = lines[-1].strip()
 
-    # Split by semi-colon to get individual titles
-    titles = [title.strip() for title in last_line.split(';')]
+    # Find the line of dashes that separates the meal plan from titles
+    separator_index = -1
+    for i, line in enumerate(lines):
+        if line.strip().startswith('---'):
+            separator_index = i
+            break
+
+    # Extract all lines after the separator
+    if separator_index >= 0:
+        title_lines = lines[separator_index + 1:]
+        # Filter out empty lines and strip whitespace
+        titles = [line.strip() for line in title_lines if line.strip()]
+    else:
+        # Fallback: if no separator found, return empty list
+        titles = []
 
     return titles
 
