@@ -1,9 +1,24 @@
-# 🍳 AI-Powered Meal Planner
+---
+title: AI Meal Planner
+emoji: 🍳
+colorFrom: orange
+colorTo: yellow
+sdk: gradio
+sdk_version: "6.0.1"
+app_file: meal_planner_app.py
+pinned: false
+license: mit
+---
+
+# AI-Powered Meal Planner
 
 An intelligent web application that generates personalised daily meal plans with beautiful food photography using Google's Gemini AI.
 
+**[Live Demo on HuggingFace Spaces](https://huggingface.co/spaces/YOUR_USERNAME/ai-meal-planner)** <!-- Replace with actual URL after deployment -->
+
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![HuggingFace Spaces](https://img.shields.io/badge/🤗-HuggingFace%20Spaces-yellow.svg)
 
 ## 📋 Overview
 
@@ -54,8 +69,8 @@ The goal was to gain hands-on experience with:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/ai-meal-planner.git
-cd ai-meal-planner
+git clone https://github.com/markgewhite/ai_meal_planner.git
+cd ai_meal_planner
 ```
 
 2. **Create a virtual environment**
@@ -137,7 +152,76 @@ ai-meal-planner/
 - **Pillow**: Image processing
 - **Python-dotenv**: Environment management
 
-## 💰 Cost
+## Deployment
+
+### HuggingFace Spaces
+
+This application is configured for easy deployment to HuggingFace Spaces.
+
+#### Prerequisites
+
+1. A [HuggingFace account](https://huggingface.co/join)
+2. A Google Gemini API key
+
+#### Step-by-Step Deployment
+
+1. **Create a new Space on HuggingFace**
+   - Go to [huggingface.co/new-space](https://huggingface.co/new-space)
+   - Choose a name (e.g., `ai-meal-planner`)
+   - Select **Gradio** as the SDK
+   - Choose visibility (public or private)
+   - Click "Create Space"
+
+2. **Clone your new Space locally**
+   ```bash
+   git clone https://huggingface.co/spaces/YOUR_USERNAME/ai-meal-planner
+   cd ai-meal-planner
+   ```
+
+3. **Copy the required files to your Space**
+   - `meal_planner_app.py` - Main application file
+   - `requirements.txt` - Python dependencies
+   - `README.md` - This file (includes HuggingFace Spaces configuration)
+
+4. **Configure your API key as a Space Secret**
+   - Go to your Space's Settings page
+   - Navigate to "Repository secrets"
+   - Add a new secret:
+     - Name: `GOOGLE_API_KEY`
+     - Value: Your Google Gemini API key
+   - This keeps your API key secure and out of version control
+
+5. **Push to HuggingFace**
+   ```bash
+   git add .
+   git commit -m "Initial deployment"
+   git push
+   ```
+
+6. **Wait for the build**
+   - HuggingFace will automatically build and deploy your app
+   - Check the "Logs" tab if there are any issues
+   - Once complete, your app will be live at `https://huggingface.co/spaces/YOUR_USERNAME/ai-meal-planner`
+
+#### Alternative: Push from existing repo
+
+If you already have this repo cloned locally:
+
+```bash
+# Add HuggingFace as a remote
+git remote add huggingface https://huggingface.co/spaces/YOUR_USERNAME/ai-meal-planner
+
+# Push to HuggingFace
+git push huggingface main
+```
+
+#### Troubleshooting
+
+- **API key not found**: Ensure `GOOGLE_API_KEY` is set in Space Secrets
+- **Build fails**: Check that `requirements.txt` is present and properly formatted
+- **App crashes on startup**: Check the Logs tab for error messages
+
+## Cost
 
 Using this application is extremely affordable:
 
